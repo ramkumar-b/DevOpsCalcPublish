@@ -11,7 +11,7 @@ namespace DevOpsCalc.Controllers.Tests
         [TestMethod()]
         public void TestAdd()
         {
-            // arrange
+            // arrange.
 
  
             OperatorsModel model = new OperatorsModel {FirstNum = 10.0, SecondNum = 2.0};
