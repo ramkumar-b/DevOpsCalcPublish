@@ -1,0 +1,39 @@
+﻿
+@model DevOpsCalc.Models.OperatorsModel
+@{
+    Layout = null;
+}
+
+@using (Html.BeginForm())
+{
+<fieldset>
+    <legend style="color:blue"> DevOps Training </legend> <br /> <br />
+    <table>
+        <tr><td>Enter the first Number:</td><td>@Html.EditorFor(number => number.FirstNum)</td></tr>
+        <tr><td>Enter the Second Number:</td><td>@Html.EditorFor(number => number.SecondNum)</td></tr>
+    </table>
+
+    <table>
+        <tr>
+            <td>
+                <input type="submit"
+                       value="add"
+                       name="command" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="submit"
+                       value="subtract"
+                       name="command" />
+            </td>
+        </tr>
+    </table>
+
+    <br /> <br />
+    <h2 style="color:brown">
+        @Html.Label("The Answer is :")
+        @Html.DisplayFor(number => number.Answer)
+    </h2>
+</fieldset>
+    }
